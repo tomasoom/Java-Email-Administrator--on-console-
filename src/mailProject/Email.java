@@ -14,6 +14,7 @@ public class Email {
     public Email(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
+        this.password = this.generatePassword();
     }
 
     public void setDepartment(){
@@ -48,6 +49,7 @@ public class Email {
             email = this.firstName.toLowerCase() + "." + this.lastName.toLowerCase() + "@" + this.department.toLowerCase() + ".company.com";
         }
         this.email = email;
+        System.out.println("Email Created: " + this.email);
         return this.email;
     }
 
@@ -101,8 +103,9 @@ public class Email {
             String text = input.next();
             String email = text + "@" + this.department.toLowerCase() + ".company.com";
             this.altEmail = email;
+            System.out.println("Alternative email Created: " + this.altEmail);
         } else {
-            System.out.println("An alternative email can't be created!A department is absent or an alternative email already exists!");
+            System.out.println("An alternative email can't be created! A department is absent or an alternative email already exists!");
             this.setDepartment();
         }
     }
@@ -114,7 +117,10 @@ public class Email {
         else{
             System.out.println("Insufficient data to perform this task! (Check if email or mailbox capacity are already defined)");
         }
+    }
 
+    public String printPassword(){
+        return this.password;
     }
 
 }
