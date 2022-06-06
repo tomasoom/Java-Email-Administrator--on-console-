@@ -53,12 +53,12 @@ public class Email {
 
     public String generatePassword(){
         int maxLength = 15;
-        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         String psw = "";
         List<Character> pass = new ArrayList<Character>();
 
-        for(int i = 0; i < caracteres.length(); i++){
-            pass.add(caracteres.charAt(i));
+        for(int i = 0; i < characters.length(); i++){
+            pass.add(characters.charAt(i));
         }
 
         Collections.shuffle(pass);
