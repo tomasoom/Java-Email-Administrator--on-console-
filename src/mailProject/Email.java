@@ -113,7 +113,7 @@ public class Email {
         }
         else{
             System.out.println("Insufficient data to perform this task! (Check if email or mailbox capacity are already defined)");
-           }
+        }
 
     }
 
